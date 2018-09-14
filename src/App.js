@@ -23,13 +23,22 @@ const styles = theme => ({
 
 class SimpleTable extends React.Component {
   state = {
-    rows: [ ],
+    rows: [
+     {name: "QA1", status: "Down"},
+     {name: "QA2", status: "Running"},
+     {name: "QA3", status: "Down"},
+     {name: "QA4", status: "Running"},
+     {name: "QA5", status: "Running"},
+     {name: "QA6", status: "Running"},
+    ]
   }
 
   componentDidMount() {
+    /*
     axios.get("http://localhost:8080/servers").then(resp => {
       this.setState({rows: resp.data})
     })
+    */
   }
 
   toggleServer(id) {
